@@ -8,7 +8,7 @@ from app.database import get_db
 
 router = APIRouter()
 
-@router.post("/create",response_model=schema.ResponseBase, status_code=status.HTTP_201_CREATED)
+@router.post("/create/",response_model=schema.ResponseBase, status_code=status.HTTP_201_CREATED)
 def create_item(item: schema.ItemCreate, db: Session = Depends(get_db)):
     try:
         db_item = crud_operations.create_item(db, item)
@@ -63,7 +63,7 @@ def delete_item(id: int, db: Session = Depends(get_db)):
     except Exception as e:
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
 
-@router.get("/get_items", response_model=List[schema.Item],status_code=status.HTTP_200_OK)
+@router.get("/get_items/", response_model=List[schema.Item],status_code=status.HTTP_200_OK)
 def get_items(db: Session = Depends(get_db)):
     try:
         return crud_operations.get_items(db)

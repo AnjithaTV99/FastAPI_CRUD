@@ -62,7 +62,7 @@ uvicorn main:app --reload
 
 ### Create an Item
 
-- **Endpoint:** `POST /items/`
+- **Endpoint:** `POST /items/create/`
 - **Description:** Create a new item.
 - **Request Body:**
 
@@ -89,7 +89,7 @@ uvicorn main:app --reload
 
 ### Get an Item by ID
 
-- **Endpoint:** `GET /items/{id}`
+- **Endpoint:** `GET /items/get_item_by_id/{id}`
 - **Description:** Retrieve an item by its ID.
 - **Response:**
     ```json
@@ -107,7 +107,7 @@ uvicorn main:app --reload
 
 ### Update an Item by ID
 
-- **Endpoint:** `PUT /items/{id}`
+- **Endpoint:** `PUT /items/update_item_by_id/{id}`
 - **Description:** Update an existing item by its ID.
 - **Request Body:**
     ```json
@@ -133,7 +133,7 @@ uvicorn main:app --reload
 
 ### Delete an Item by ID
 
-- **Endpoint:** `DELETE /items/{id}`
+- **Endpoint:** `DELETE /items/delete_itm_by_id/{id}`
 - **Description:** Delete an item by its ID.
 - **Response:**
     ```json
@@ -151,7 +151,7 @@ uvicorn main:app --reload
 
 ### List All Items
 
-- **Endpoint:** `GET /items/`
+- **Endpoint:** `GET /items//get_items/`
 - **Description:** Retrieve a list of all items.
 - **Response:**
     ```json
