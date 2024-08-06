@@ -141,10 +141,10 @@ uvicorn main:app --reload
         "status": "success",
         "message": "Item deleted successfully",
         "data": {
-            "name": "this is my new item",
-            "description": "new item created by Dan Brown",
-            "price": 799,
-            "id": 8
+            "id": 1,
+            "name": "Item Name",
+            "description": "Item Description",
+            "price": 10.99
         }
     }
     ```
